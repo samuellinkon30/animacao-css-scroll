@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+
+    <section>
+        <h4>SAMUEL LINKON</h4>
+    </section>
+</body>
+
+</html>
+<script>
+    let set = document.querySelector('h4');
+    window.addEventListener('scroll', function() {
+
+
+        let scroll = window.scrollY;
+        console.log("Distancia: " + scroll);
+
+        set.style.transition = "all 500ms ease-out";
+        if (scroll >= 50) {
+            set.style.backgroundColor = "red";
+        } else {
+            set.style.backgroundColor = "transparent";
+
+        }
+    });
+</script>
+
+<style>
+    body {
+        height: 500vh;
+    }
+    
+    h4 {
+        margin-bottom: 100vh;
+        height: 100px;
+        position: fixed;
+    }
+    
+    section {
+        transition: all 1000ms ease-out;
+    }
+</style>
